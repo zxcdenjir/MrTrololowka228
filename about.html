@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="imgs/creeper-icon.png">
+    <title>О нас</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('menu-open'); // Переключаем состояние кнопки
+        navMenu.classList.toggle('menu-open'); // Раскрываем или скрываем меню
+    });
+});
+</script>
+
+<body>
+    <main>
+        <nav>
+            <button id="menu-toggle" onclick="toggleMenu()">Меню</button>
+            <ul id="menu">
+                <li><a href="/">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="store.html">Магазин</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        </nav>
+        <div class="container aboutme">
+            <img src="imgs/Моё фото.png" alt="Фото автора">
+            <p>Всем привет, дорогие друзья! С вами снова я, Мистер Трололошка, и на моём сайте я рассказываю о том, как
+                поиграть в Майнкрафт на любом компьютере в колледже. Также у меня есть свой официальный
+                <a style="color: white;" href="store.html">мерч</a>. Всем приятного просмотра! <small>(На фото я 100%)</small>
+            </p>
+        </div>
+        <div class="container server-reklama">
+            <p>Также заходите на мой самый лучший сервер в Майнкрафте StreamCraft</p>
+            <p>IP: streamcraft.net<br>Port: 5432</p>
+            <a href="https://streamcraft.net/" target="_blank">
+                <button class="connect">Подключиться</button>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

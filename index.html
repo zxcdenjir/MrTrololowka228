@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/creeper-icon.png">
+    <title>Главная страница</title>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('menu-open'); // Переключаем состояние кнопки
+        navMenu.classList.toggle('menu-open'); // Раскрываем или скрываем меню
+    });
+});
+</script>
+
+<body>
+    <main>
+        <nav>
+            <button id="menu-toggle" onclick="toggleMenu()">Меню</button>
+            <ul id="menu">
+                <li><a href="/">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="store.html">Магазин</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+
+            <header>
+                <h1>Как запустить Майнкрафт на любом пк в колледже</h1>
+            </header>
+            <p>Если вам скучно на уроках, а браузерные игры уже надоели, то этот сайт для вас</p>
+            <p>Мы будем использовать Legacy Launcher</p>
+            <p>Открываем Obmen for Students и ищем там папку с необычным названием</p>
+            <img src="imgs/Снимок.PNG" alt="">
+            <p>Открываем эту папку и сбрасываем папку .tlauncher на рабочий стол, это папка с нашим лаунчером</p>
+            <img src="imgs/Снимок2.PNG" alt="">
+            <p>Открывем папку с лаунчером и ищем там TL.exe</p>
+            <img src="imgs/Снимок3.PNG" alt="">
+            <p>Запускаем наш лаунчер и в этом окошке создаём аккаунт без пароля (если его нет)</p>
+            <img src="imgs/Снимок4.PNG" alt="">
+            <p>Далее, выбираем версию ниже и запускаем игру</p>
+            <p>Наконец, вместо скучных уроков информатики, мы можем заниматься по-настоящему важными делами</p>
+            <img src="imgs/Снимок5.png" alt="">
+        </div>
+    </main>
+</body>
+
+</html>

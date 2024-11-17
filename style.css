@@ -1,0 +1,162 @@
+/* Подключение шрифтов */
+@font-face {
+    font-family: "minecraft-title";
+    src: url(ttf/ofont.ru_Minecraft\ Title\ Cyrillic.ttf);
+}
+
+@font-face {
+    font-family: "minecraft-rus";
+    src: url(ttf/minecraft.ttf);
+}
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1vh;
+    font-family: "minecraft-rus", sans-serif;
+    background-image: url(imgs/bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 848px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовки */
+header h1 {
+    font-family: "minecraft-title";
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Абзацы */
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Изображения */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Навигация */
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    transition: max-height 0.3s ease;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    padding: 15px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: "minecraft-title";
+    transition: color 0.3s ease
+}
+
+nav a:hover {
+    color: #3baf3b;
+}
+
+/* Кнопка "Меню" для мобильных экранов */
+#menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    font-family: "minecraft-title";
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #3969b5; /* Яркий зеленый цвет травы */
+    color: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 4px solid #2f4d8e;
+    box-sizing: border-box;
+    font-family: "minecraft-title";
+    box-shadow: 0 6px #2f4d8e, 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+#menu-toggle.menu-open {
+    transform: translateY(4px);
+    box-shadow: 0 2px #2f4d8e, 0 6px 10px rgba(0, 0, 0, 0.2);
+    background-color: #425ea3
+}
+
+#menu-toggle:hover {
+    background-color: #425ea3;
+}
+
+/* Скрытие меню по умолчанию на мобильных экранах */
+@media (max-width: 848px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        max-height: 0; /* Скрываем меню */
+        overflow: hidden;
+    }
+
+    #menu-toggle {
+        display: block; /* Отображаем кнопку "Меню" на мобильных устройствах */
+    }
+
+    /* Класс для отображения меню */
+    .menu-open {
+        max-height: 350px; /* Ограничение высоты для плавного раскрытия */
+    }
+}
+
+/* Дополнительные стили для малых экранов */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+}

@@ -1,0 +1,344 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование кнопки по горизонтали */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+#shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.product-card {
+    background-color: #7a5230; /* Цвет древесины из Minecraft */
+    border: 5px solid #3a240d; /* Тёмный оттенок древесины */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}   
+
+.product-card img {
+    max-width: 97.5%;
+    height: auto;
+    border: 3px solid #3a240d;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: #ffffff;
+    font-size: 18pt;
+    font-family: "minecraft-rus";
+}
+
+section p {
+    font-size: 16pt;
+    color: #f4f4f4;
+    margin-top: 0;
+}
+
+.buy-button, #cart-button, #checkout-button {
+    background-color: #39b54a; /* Яркий зеленый цвет травы */
+    color: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    
+    border: 4px solid #2f8e3b;
+    box-sizing: border-box;
+    font-family: "minecraft-title";
+
+    box-shadow: 0 6px #2f8e3b, 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+.buy-button {
+    width: 95%;
+}
+
+/* Убираем скругление для квадратной формы */
+.buy-button, #cart-button, #checkout-button {
+    border-radius: 0;
+}
+
+.buy-button:hover, #cart-button:hover, #checkout-button {
+    background-color: #43a450;
+}
+
+
+/* Эффект нажатия — кнопка становится вдавленной */
+.buy-button:active, #cart-button:active, #checkout-button:active {
+    transform: translateY(4px); /* Вдавливаем кнопку */
+    box-shadow: 0 2px #2f8e3b, 0 6px 10px rgba(0, 0, 0, 0.2); /* Тень уменьшается, создавая эффект "вдавленности" */
+}
+
+.product-card img {
+    /*background-color: rgba(255, 255, 255, 0.164);*/
+    background-color: white;
+}
+
+.close-button {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover, .close-button:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Стили для корзины */
+#cart-items {
+    margin: 20px 0;
+}
+
+#checkout-button {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#cart-button {
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 250px;
+    height: 80px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #23272ed5; 
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #888; 
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-content p, h2 {
+    color: rgb(255, 255, 255);
+}
+
+.modal-content h2 {
+    font-family: "Minecraft-title";
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,    
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для отображения товаров в корзине */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item img.cart-item-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.total-price {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#cart-items {
+    max-height: 52vh; /* Ограничение высоты для прокрутки */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    padding-right: 10px; /* Отступ справа для удобства прокрутки */
+}
+
+.remove-button{
+    margin-left: 10px;
+    background-color: #b53939; /* Яркий зеленый цвет травы */
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    
+    border: 4px solid #8e2f2f; /* Граница кнопки с темно-зеленым цветом */
+    box-sizing: border-box; /* Учитываем границу в размере кнопки */
+    font-family: "minecraft-title";
+    /* Добавляем объем за счет теней */
+    box-shadow: 0 6px #8e2f2f, 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+.remove-button:active {
+    transform: translateY(4px); /* Вдавливаем кнопку */
+    box-shadow: 0 2px #8e2f2f, 0 6px 10px rgba(0, 0, 0, 0.2); /* Тень уменьшается, создавая эффект "вдавленности" */
+}
+
+.remove-button:hover{
+    background-color: #a44343;
+}
+
+/*--------------------------*/
+
+/* Для экранов шириной до 768px (планшеты) */
+@media (max-width: 768px) {
+    #shop {
+        flex-direction: column; /* Меняем ориентацию с горизонтальной на вертикальную */
+        align-items: center; /* Центрируем товары */
+    }
+
+    .product-card {
+        width: 90%; /* Увеличиваем ширину карточек */
+    }
+
+    #cart-button {
+        width: 80%;
+        font-size: 20px;
+    }
+}
+
+/* Для экранов шириной до 480px (мобильные телефоны) */
+@media (max-width: 480px) {
+    .product-card {
+        width: 95%; /* Карточки занимают почти всю ширину экрана */
+    }
+
+    .product-card img {
+        max-width: 100%; /* Картинка подстраивается под карточку */
+    }
+
+    section h2 {
+        font-size: 16pt;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .buy-button {
+        font-size: 12px;
+        padding: 10px 15px; /* Уменьшаем размеры кнопок */
+    }
+
+    #cart-button {
+        width: 90%; /* Кнопка корзины растягивается на ширину экрана */
+        font-size: 18px;
+    }
+
+    #checkout-button {
+        font-size: 16px;
+    }
+
+    .modal-content {
+        width: 90%; /* Уменьшаем ширину модального окна */
+    }
+}
+section h2 {
+    letter-spacing: 1.1pt;
+    font-size: 1.4rem; /* Вместо фиксированного размера */
+}
+
+section p {
+    width: 100%;
+    font-size: 0.9rem;
+    
+}
+img {
+    max-width: 100%;
+    height: auto; /* Сохраняем пропорции */
+}
+
+.product-card {
+    display: flex; /* Включаем flexbox */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    justify-content: space-between; /* Пространство между элементами */
+    align-items: center;
+}
+
+/* Контейнер для уведомлений */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Уведомление */
+.toast {
+    background-color: #323232;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* По умолчанию невидим */
+    transform: translateY(-20px); /* Сдвиг вверх */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Анимация */
+}
+
+/* Иконка уведомления */
+.toast-icon {
+    font-size: 1.5rem;
+}
+
+/* Видимое состояние */
+.toast.show {
+    opacity: 1; /* Видимое уведомление */
+    transform: translateY(0); /* Возврат на место */
+}
+
+/* Скрытое состояние */
+.toast.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Уход анимацией */
+}

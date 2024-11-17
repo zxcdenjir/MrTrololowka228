@@ -1,0 +1,87 @@
+.aboutme {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutme img {
+    min-width: 300px;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.aboutme p {
+    flex: 1 1 50%;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Секция сервера */
+.server-reklama {
+    text-align: center;
+}
+
+.server-reklama p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Кнопка */
+.connect  {
+    position: relative;
+    cursor: pointer;
+    width: 500px;
+    height: 70px;
+    font-size: 24px;
+    background: url(https://i.ibb.co/rb2TWXL/bgbtn.png);
+    display: inline-block;
+    padding: 0.2em 0em;
+    font-family: "minecraft-rus";
+    white-space: nowrap;
+    line-height: unset;
+    color: #FFF;
+    text-shadow: 0.12em 0.1em 0 #000;
+    text-align: center;
+    font-weight: 100;
+    margin: 1px;
+    box-shadow: 0 0 0 0.1em #000, inset 2px 2px 0 2px rgba(255, 255, 255, 0.5), inset -4px -4px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .aboutme {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutme img,
+    .aboutme p {
+        flex: 1 1 100%;
+    }
+
+    .server-reklama {
+        padding: 15px;
+    }
+
+    .connect {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .aboutme p {
+        font-size: 18px;
+    }
+
+    .server-reklama p {
+        font-size: 16px;
+    }
+    
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="icon" href="imgs/creeper-icon.png">
+    <title>Магазин</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('menu-open'); // Переключаем состояние кнопки
+        navMenu.classList.toggle('menu-open'); // Раскрываем или скрываем меню
+    });
+});
+</script>
+
+<body>
+    <main>
+        <nav>
+            <button id="menu-toggle" onclick="toggleMenu()">Меню</button>
+            <ul id="menu">
+                <li><a href="/">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="store.html">Магазин</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div id="toast-container"></div>
+            <button id="cart-button" onclick="showCart()">Корзина</button>
+            <section id="shop">
+                <div class="product-card">
+                    <img src="imgs/MCIC-SCBA-100016-MF_1800x1800.webp">
+                    <h2>Футболка Minecraft</h2>
+                    <p>Цена: 1999 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+        
+                <div class="product-card">
+                    <img src="imgs/MCIC-ENDRFC-100040-11oz-Left-MF_1800x1800.webp" >
+                    <h2>Кружка Эндермен</h2>
+                    <p>Цена: 589 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="imgs/MCMATTEL-CREEPERPLUSH-1_1800x1800-Photoroom.png" >
+                    <h2>Плюшевый крипер</h2>
+                    <p>Цена: 500 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="imgs/MCICON-DTN-100139-Adult-ShortSleeve-Tshirt-FlatFront-MF_1800x1800.webp" >
+                    <h2>Футболка Minecraft</h2>
+                    <p>Цена: 2399 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="imgs/MCIC-LOGO-100161-Black-MF_1800x1800.webp" >
+                    <h2>Шапка Minecraft</h2>
+                    <p>Цена: 999 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="imgs/MCRF-DMDSWD-6_1800x1800.webp" >
+                    <h2>Лампа меч</h2>
+                    <p>Цена: 3799 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="imgs/MCICON-BOOM-100016-Kids-ShortSleeve-Tshirt-Red-MF_1800x1800.webp" >
+                    <h2>Футболка TNT</h2>
+                    <p>Цена: 2299 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>  
+
+                <div class="product-card">
+                    <img src="imgs/MC-BABS-28-100133-FR-MF_1800x1800.webp" >
+                    <h2>Рюкзак Minecraft</h2>
+                    <p>Цена: 3999 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="imgs/65645-ALT_1800x1800.webp" >
+                    <h2>Алмазная броня</h2>
+                    <p>Цена: 4499 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+        
+                <div class="product-card">
+                    <img src="imgs/MCJM-CHCKN-100011-MF_1800x1800.webp" >
+                    <h2>Футболка TNT</h2>
+                    <p>Цена: 2299 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div> 
+
+                <div class="product-card">
+                    <img src="imgs/MC-CHARFACE-FOX-100166-FRONT-MF_990004b7-c378-461b-8b28-7e2943b86f03_1800x1800.webp" >
+                    <h2>Худи лиса</h2>
+                    <p>Цена: 2599 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="imgs/DSC_8593_1800x1800.webp" >
+                    <h2>Свитер Minecraft</h2>
+                    <p>Цена: 4799 рублей</p>
+                    <button class="buy-button">В корзину</button>
+                </div>
+            </section>
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeCart()">&times;</span>
+                    <h2>Ваша корзина</h2>
+                    <div id="cart-items"></div>
+                    <button id="checkout-button" onclick="checkout()">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/creeper-icon.png">
+    <title>Контакты</title>
+</head>
+
+<style>
+img {
+    position: relative;
+    top: 4.25px;
+    margin: 0;
+}
+
+.contact-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #3baf3b;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    text-shadow: 2px 2px 0px #3baf3b, 4px 4px 0px #194c20;
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('menu-open'); // Переключаем состояние кнопки
+        navMenu.classList.toggle('menu-open'); // Раскрываем или скрываем меню
+    });
+});
+</script>
+
+<body>
+    <main>
+        <nav>
+            <button id="menu-toggle" onclick="toggleMenu()">Меню</button>
+            <ul id="menu">
+                <li><a href="/">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="store.html">Магазин</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="contacts-background">
+                
+            </div>
+            <div class="contacts">
+                <h2>Свяжитесь со мной</h2>
+                <div class="contact-item">
+                    <a href="https://t.me/mr_trololoshka" target="_blank">
+                        <img src="imgs/telegram-icon.png" alt="Telegram"> Telegram: @mr_trololoshka
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:mr.trololoshka@gmail.com" target="_blank">
+                        <img src="imgs/email-icon.png" alt="Email"> Email: mr.trololoshka@gmail.com
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://youtube.com/@MrLololoshka" target="_blank">
+                        <img src="imgs/youtube-icon.png" alt="YouTube"> YouTube: Mr_Trololoshka
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
