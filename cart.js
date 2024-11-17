@@ -68,10 +68,13 @@ function showCart() {
             totalPrice += item.price;
         });
 
-        // Отображаем общую стоимость товаров
-        const totalPriceElement = document.createElement('p');
+        // Отображаем общую стоимость товаров с кнопкой "инфо"
+        const totalPriceElement = document.createElement('div');
         totalPriceElement.classList.add('total-price');
-        totalPriceElement.innerText = `Общая стоимость: ${totalPrice} рублей`;
+        totalPriceElement.innerHTML = `
+            Общая стоимость: ${totalPrice} рублей
+            <button class="info-button" onclick="showToast('Сайт полностью шуточный и никакой товар вам не доставят! Потраченные деньги уйдут на улучшение комьюнити майнкрафта')">ℹ️</button>
+        `;
         cartItems.appendChild(totalPriceElement);
     }
 
