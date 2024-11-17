@@ -68,13 +68,10 @@ function showCart() {
             totalPrice += item.price;
         });
 
-        // Отображаем общую стоимость товаров с кнопкой "инфо"
-        const totalPriceElement = document.createElement('div');
+        // Отображаем общую стоимость товаров
+        const totalPriceElement = document.createElement('p');
         totalPriceElement.classList.add('total-price');
-        totalPriceElement.innerHTML = `
-            Общая стоимость: ${totalPrice} рублей
-            <button class="info-button" onclick="showToast('Для оплаты заказа необходим аккаунт Yoomoney!')">&#8505;</button>
-        `;
+        totalPriceElement.innerText = `Общая стоимость: ${totalPrice} рублей`;
         cartItems.appendChild(totalPriceElement);
     }
 
