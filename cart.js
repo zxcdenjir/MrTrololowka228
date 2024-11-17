@@ -73,7 +73,7 @@ function showCart() {
         totalPriceElement.classList.add('total-price');
         totalPriceElement.innerHTML = `
             Общая стоимость: ${totalPrice} рублей
-            <button class="info-button" onclick="showToast('Сайт полностью шуточный и никакой товар вам не доставят! Потраченные деньги уйдут на улучшение комьюнити майнкрафта')">ℹ️</button>
+            <button class="info-button" onclick="showToast('Сайт полностью шуточный и никакой товар вам не доставят! <br>Потраченные деньги уйдут на улучшение комьюнити майнкрафта')">ℹ️</button>
         `;
         cartItems.appendChild(totalPriceElement);
     }
