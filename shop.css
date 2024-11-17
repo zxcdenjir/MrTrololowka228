@@ -342,3 +342,17 @@ img {
     transform: translateY(-20px);
     transition: opacity 0.4s ease, transform 0.4s ease; /* Уход анимацией */
 }
+
+.info-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    color: #007BFF;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.info-button:hover {
+    color: #0056b3;
+}
